@@ -1,0 +1,51 @@
+
+<a href="#index">Index</a><br/>
+<a href="#about">About</a>
+
+<hr/>
+<div ng-repeat="game in game_list">
+    <a href="#game/{{game.game_id}}">{{game.game_id}}</a><br/>
+</div>
+<hr/>
+
+
+
+
+
+
+Index
+
+<div id="mbaj"></div>
+
+<h1>New Game</h1>
+<p>
+    Create new game:
+</p>
+
+
+    <md-input-container md-no-float layout-align="center center"> 
+        <input type="text" ng-model="new_game_name"  placeholder="New Game Name" >
+    </md-input-container>
+
+    <button ngf-select ng-model="picFile" accept="image/*">Select Picture</button>
+    <div ngf-drop ng-model="picFile" ngf-pattern="image/*" class="cropArea">
+            <img-crop image="picFile  | ngfDataUrl"       
+            
+            ngf-max-size="20MB" ngf-min-height="34" 
+            ngf-resize="{width: 34, height: 34}"
+            result-image-size="34"
+            result-image="croppedDataUrl" ng-init="croppedDataUrl=''">
+    </img-crop>
+    </div>
+    <div>
+        <img ng-src="{{croppedDataUrl}}" class="img_prev" />
+    </div>
+  
+        
+        
+        
+    <md-button aria-label="Create" class="md-icon-button" ng-click="addGame()">
+        <ng-md-icon icon="send"></ng-md-icon>
+    </md-button>
+        
+    

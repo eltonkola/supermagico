@@ -1,0 +1,29 @@
+<a href="#index">Index</a><br/>
+<a href="#about">About</a>
+
+<hr/>
+
+Game {{gameId}}
+<br/>
+
+
+<div ng-show="showInsertPixel">
+
+    <h2>Choose your color for pixel: {{pixel_y}}x{{pixel_x}}</h2>
+    <p>
+        Color: <div md-color-picker ng-model="pixelColor"></div>
+    </p>
+    <p>
+        Each use can create a pixel color, later on you can always chnage the version of your pixel.
+    </p>
+    <md-button ng-click="doSavePixel()">
+        Save Pixel
+    </md-button> 
+    <md-button ng-click="cancelSavePixel()">
+        Cancel
+    </md-button> 
+    
+</div>
+
+
+<div ng-pixel-grid ng-model="game" on-pixel-click="createPixelAt(x,y)">..</div>

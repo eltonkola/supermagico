@@ -1,0 +1,64 @@
+.canvas_row{
+    position:relative;
+}
+
+.canvas_pixel{
+    position:relative;
+    float:left;
+    width:20px;
+    height:21px;
+    /*
+    border:1px solid #000000;
+    border-width: 0px 1px 1px 0px;
+    */
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    cursor:pointer;
+}
+
+.canvas_container{
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+}
+
+.an_pix{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:20px;
+    height:21px;
+}
+
+.cropArea {
+    background: #E4E4E4;
+    overflow: hidden;
+    width:500px;
+    height:350px;
+}
+
+
+
+
+.animate-enter, 
+.animate-leave
+{ 
+    -webkit-transition: 725ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+    -moz-transition: 725ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+    -ms-transition: 725ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+    -o-transition: 725ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+    transition: 725ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+} 
+ 
+.animate-enter {
+    left: 100%;
+}
+.animate-enter.animate-enter-active {
+    left: 0;
+}
+ 
+.animate-leave {
+    left: 0;
+}
+.animate-leave.animate-leave-active{
+    left: -100%;
+}

@@ -1,0 +1,7 @@
+<div ng-show="pixel_index == -1" style="background-color:{{pixels.original.color}};" class="an_pix">
+    &nbsp;
+</div>
+
+<div ng-repeat="pixel in pixels.versions" ng-show="$index == pixel_index" style="background-color:{{pixel.color}};" class="an_pix">
+    &nbsp;
+</div>

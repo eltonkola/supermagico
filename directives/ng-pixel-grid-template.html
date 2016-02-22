@@ -1,0 +1,7 @@
+<div layout="column" class="canvas_container">
+    <div ng-repeat="pixel_row in game.pixels" layout="row" class="canvas_row">
+        <div ng-repeat="pixel_col in pixel_row" class="canvas_pixel" >
+            <div ng-pixel-slide ng-model="pixel_col" ng-click="pixelClick({x: $index, y: $parent.$index})"></div>
+        </div>
+    </div>
+</div>
